@@ -1,0 +1,194 @@
+/* Algemene padding voor mobiel */
+.container, .centered-content, .contact_section, .common_style, .info_section {
+    padding-left: 20px; /* Verhoogde ruimte aan de linkerkant */
+    padding-right: 20px; /* Verhoogde ruimte aan de rechterkant */
+}
+
+/* Media Queries voor Responsiveness */
+
+/* Tablets en kleinere desktops */
+@media (max-width: 1120px) {}
+
+/* Laptops en tablets */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero_detail-box {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+    .hero_img-container {
+        width: 100%;
+    }
+
+    .hero-container.container {
+        padding-top: 45px;
+    }
+
+    .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+        color: #fff;
+    }
+}
+
+/* Tablets in portrait mode en grotere telefoons */
+@media (max-width: 768px) {
+    .hero_detail-box {
+        text-align: center;
+    }
+
+    .hero_detail-box h1 {
+        width: 100%;
+    }
+
+    .top_container::after {
+        display: none;
+    }
+
+    .top_container::before {
+        background-size: cover;
+    }
+
+    .info_section .col-md-3 {
+        padding: 20px 25px;
+        text-align: center;
+    }
+
+    .common_style img {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    /* Ruimte toevoegen aan tekst */
+    .container, .centered-content, .contact_section, .common_style, .info_section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Aanpassing voor de client-sectie op mobiel */
+    .client_detail-box {
+        margin-top: 30px; /* Extra ruimte onder de afbeelding voor tekst */
+    }
+}
+
+/* Kleinere telefoons */
+@media (max-width: 576px) {
+    .hero-container {
+        padding-bottom: 100px;
+    }
+
+    .client_img-box::before,
+    .client_img-box::after {
+        content: "";
+        position: absolute;
+        width: 75px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #3A77BF;
+    }
+
+    .client_img-box::before {
+        top: 0;
+        transform: rotate(132deg);
+        left: -15px;
+        animation: beforeanimate 1s;
+        animation-delay: .1s;
+    }
+
+    .client_img-box::after {
+        bottom: 0px;
+        transform: rotate(135deg);
+        right: -15px;
+        animation: afteranimate 1s;
+        animation-delay: .1s;
+    }
+
+    @keyframes beforeanimate {
+        0% {
+            top: 43%;
+            transform: rotate(142deg);
+            left: 31%;
+        }
+        100% {
+            top: 0px;
+            transform: rotate(132deg);
+            left: -15px;
+        }
+    }
+
+    @keyframes afteranimate {
+        0% {
+            bottom: 46%;
+            transform: rotate(142deg);
+            right: 35%;
+        }
+        100% {
+            bottom: 0px;
+            transform: rotate(135deg);
+            right: -15px;
+        }
+    }
+
+    .contact_section {
+        padding: 0px 20px 0 20px;
+    }
+
+    .sub_page .contact_section {
+        padding: 45px 20px;
+    }
+
+    .contact_section input {
+        width: 100%;
+    }
+
+    .info_section .social-box {
+        width: auto;
+    }
+
+    /* Ruimte toevoegen aan tekst */
+    .container, .centered-content, .contact_section, .common_style, .info_section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Aanpassing voor de client-sectie op mobiel */
+    .client_detail-box {
+        margin-top: 30px; /* Extra ruimte onder de afbeelding voor tekst */
+    }
+}
+
+/* Kleinste telefoons */
+@media (max-width: 480px) {
+    .container, .centered-content, .contact_section, .common_style, .info_section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Extra ruimte onder de client-afbeelding voor betere tekst-layout */
+    .client_detail-box {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container, .centered-content, .contact_section, .common_style, .info_section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container, .centered-content, .contact_section, .common_style, .info_section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Standaard containers op grotere schermen */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
